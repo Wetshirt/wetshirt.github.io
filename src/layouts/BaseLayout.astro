@@ -1,0 +1,33 @@
+---
+const { title = "Home" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body style="margin:0;font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
+    <header style="padding:16px 20px;border-bottom:1px solid #eee;">
+      <nav style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/" style="text-decoration:none;">Home</a>
+        <a href="https://wetshirt.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+            About ↗
+        </a>
+        <a href="/publications" style="text-decoration:none;">Publications</a>
+        <a href="/projects" style="text-decoration:none;">Projects</a>
+        <a href="/lab" style="text-decoration:none;">Lab</a>
+      </nav>
+    </header>
+
+    <main style="max-width:900px;padding:28px 20px;margin:0 auto;">
+      <slot />
+    </main>
+
+    <footer style="padding:20px;border-top:1px solid #eee;color:#666;">
+      © {new Date().getFullYear()} — Built on GitHub Pages
+    </footer>
+  </body>
+</html>

@@ -1,16 +1,29 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+  <h1>Wetshirt</h1>
+
+  <p style="max-width:720px;">
+	I work primarily on backend systems and infrastructure.
+	This site is where I experiment with tools and document system designs.
+  </p>
+
+  <h2>Focus areas</h2>
+  <ul>
+    <li>
+      <b>System Architecture & Infrastructure</b><br />
+      AI Gateway, orchestration, security boundaries, and operational trade-offs.
+    </li>
+    <li>
+      <b>Research, Patents & Technical Depth</b><br />
+      Original work that connects theory, design, and real-world systems.
+    </li>
+    <li>
+      <b>Production-grade Engineering</b><br />
+      Systems that are deployable, observable, and governable.
+    </li>
+  </ul>
+</BaseLayout>
+
